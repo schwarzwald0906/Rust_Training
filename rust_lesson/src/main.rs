@@ -1,24 +1,36 @@
 fn main() {
-    let t1=(1,true,2.0);
-    let t2 =(2.0,1,true);
+    // //Vector
+    // let v1=[1,2,3];
 
-    println!("{:?}",t1) ;
+    // let mut v3=Vec::new();
+    // v3.push(1);
+    // v3.push(2);
+    // v3.push(3);
+    // println!("{:?}",v3);
 
-    let i=t1.0;
-    println!("{}",i);
+    // let x =v3.pop();
+    // println!("{:?}",x);
+    // println!("{:?}",v3);
 
-    let(x,y,_)=t2;
+    // //文字型
+    // let c1 ='a';
 
-    //配列
-    let l1=[1,2,3];
-    let l2=[0;1000];
+    // //文字列型
+    // let s1="Rust";
 
-    println!("{:?}",l1);
+    // let mut s2=String::from("Python");
+    // s2.push_str(",Rust");
 
-    let i=l1[0];
+    say_hello();
 
-    // let l3= &l1[0..2];
-    let l3= &l1[0..=2];
+    println!("{}", add(1,2));
 
-    println!("{:?}",l3);
+}
+
+fn say_hello(){
+    println!("Hello");
+}
+
+fn add(a: i32, b: i32) -> i32{
+    return a + b
 }
