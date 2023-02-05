@@ -1,3 +1,9 @@
+use std::fmt::Debug;
+use std::fmt::Display;
+
+// use rand::Rng;
+// use test_module::sub_mudule1;
+// use rust_lesson::sample_trait::{Shape,Rectangle,Circle, double_area};
 
 // struct Rectangle {
 //     width: u32,
@@ -143,23 +149,105 @@ fn main() {
     // s.sample_method();
     // t.sample_method();
 
-    let v =vec![1,2,3];
-    let val = v.get(0);
+    // let v =vec![1,2,3];
+    // let val = v.get(0);
 
-    match val {
-        // Some(1)=>println!("value is 1"),
-        // Some(2|3)=>println!("value is 2 or 3"),
-        Some(x) if *x == 1 =>println!("value is 1"),
-        Some(x) =>println!("vslue exists: {}", x ),
-        None => println!("value is None"),
-    }
-    // if let Some(x) =val {
-    //     println!("val={}",x)
+    // match val {
+    //     // Some(1)=>println!("value is 1"),
+    //     // Some(2|3)=>println!("value is 2 or 3"),
+    //     Some(x) if *x == 1 =>println!("value is 1"),
+    //     Some(x) =>println!("vslue exists: {}", x ),
+    //     None => println!("value is None"),
     // }
+    // // if let Some(x) =val {
+    // //     println!("val={}",x)
+    // // }
+
+    // let random_number = rand::thread_rng().gen_range(1..10);
+    // print!("{}",random_number);
+
+    // crate::test_module::sub_mudule1::test_fn1();
+    // self::test_module::sub_mudule1::test_fn1();
+
+    // let rect = Rectangle{
+    //     width: 4.0,
+    //     height: 5.0,
+    // };
+    // let circle =Circle {
+    //     radius: 2.0,
+    // };
+
+    // println!("Rectangle area is: {}" ,rect.calc_area());
+    // println!("Rectangle perimeter is: {}" ,rect.calc_perimeter());
+    // Rectangle::do_something();
+    // println!("Circle area is: {}" ,circle.calc_area());
+    // println!("Circle perimeter is: {}" ,circle.calc_perimeter());
+    // Circle::do_something();
+    // println!("Rectangle default: {}" ,double_area(&rect));
+    // println!("Circle default: {}" ,double_area(&circle));
+
+    let p1 = Point{x:1, y:2};
+    // let p2 = Point{x:1.1, y:1.2};
+    // let p3 = Point{x:"x", y:"a"};
+    // println!("p1.max {:?}",p1.max());
+    // println!("p2.max {:?}",p2.max());
+    // println!("p3.max {:?}",p3.max());
+
+    p1.print_arg("test");
+    p1.print_arg(true);
 
 }
 
-// impl Shape {
+// struct Point<T> {
+//     x: T,
+//     y: T,
+// }
+
+// impl<T: PartialOrd + Debug> Point<T> {
+//     fn max(&self) -> &T {
+//         if self.x >= self.y {
+//             &self.x
+//         } else {
+//             &self.y
+//         }
+//     }
+//     fn print_arg<U: Display>(&self, val: U){
+//         println!("self.x: {:?}" ,self.x);
+//         println!("val: {}", val);
+//     }
+}
+
+// fn max<T> (a:T,b:T) -> T
+// where T: PartialOrd + Debug
+// {
+//     if a >= b {
+//         a
+//     } else {
+//         b
+//     }
+// }
+
+// mod test_module {
+//     pub mod sub_mudule1{
+//         pub fn test_fn1(){
+//             println!("Hello World1");
+//         }
+//         fn test_fn2(){
+//             println!("Hello Rust1");
+//         }
+//     }
+//     mod sub_mudule2{
+//         pub fn test_fn1(){
+//             println!("Hello World2");
+//         }
+//         fn test_fn2(){
+//             println!("Hello Rust2");
+//         }
+//     }
+    
+// }
+
+// impl Shape { 
 //     fn sample_method(&self){
 //         println!("call sample_method");
 //     }
